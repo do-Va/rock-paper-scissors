@@ -1,0 +1,80 @@
+.game-button {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: all 0.2s linear;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 0px currentColor, 3px 3px 0px currentColor,
+    5px 5px 0px currentColor, 7px 7px 2px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    box-shadow: 1px 1px 0px currentColor, 3px 3px 0px currentColor,
+      5px 5px 0px currentColor, 10px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    box-shadow: 1px 1px 0px currentColor, 3px 3px 0px currentColor,
+      5px 5px 0px currentColor, 10px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  & img {
+    width: 90%;
+    transform: rotate(-45deg);
+  }
+
+  &:nth-child(2) {
+    top: 0;
+    left: 0;
+
+    &:hover,
+    &:focus {
+      top: -5px;
+      left: -5px;
+    }
+
+    &:active {
+      top: -2px;
+      left: -2px;
+    }
+  }
+
+  &:nth-child(3) {
+    top: 0;
+    right: -20px;
+
+    &:hover,
+    &:focus {
+      top: -5px;
+      right: -15px;
+    }
+
+    &:active {
+      top: -2px;
+      right: -18px;
+    }
+  }
+
+  &:nth-child(1) {
+    bottom: -20px;
+    left: 0;
+
+    &:hover,
+    &:focus {
+      left: -5px;
+      bottom: -15px;
+    }
+
+    &:active {
+      left: -2px;
+      bottom: -18px;
+    }
+  }
+}

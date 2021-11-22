@@ -1,0 +1,54 @@
+$sub-color: grey;
+
+.group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .form-input {
+    background: none;
+    background-color: rgba(255, 255, 255, 0.356);
+    color: $sub-color;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin: 25px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label span {
+      transform: translateY(-35px);
+    }
+  }
+
+  input[type='password'] {
+    letter-spacing: 0.3em;
+  }
+
+  .form-input-label {
+    color: $sub-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    transition: 300ms ease all;
+
+    &.shrink span {
+      transform: translateY(-35px);
+    }
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      min-width: 5px;
+      transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+}

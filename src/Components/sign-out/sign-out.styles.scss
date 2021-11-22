@@ -1,0 +1,17 @@
+.sign-out-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  padding: 5px 10px;
+  border: none;
+  background: #cf2a38;
+  border-radius: 3px;
+  transition: all 0.2s linear;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: #b91725;
+  }
+}

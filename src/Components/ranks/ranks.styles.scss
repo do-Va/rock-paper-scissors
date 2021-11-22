@@ -1,0 +1,29 @@
+.ranks {
+  width: auto;
+  background-color: #ee489a;
+  color: #fff;
+  display: flex;
+  font-family: 'Press Start 2P', cursive;
+
+  gap: 10px;
+  flex-direction: column;
+  padding: 10px 0;
+
+  border-radius: 5px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+
+    padding: 5px 10px;
+
+    p {
+      color: #fff;
+    }
+  }
+
+  &.show {
+    transform: scale(1);
+  }
+}

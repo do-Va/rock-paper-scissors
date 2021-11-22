@@ -1,0 +1,23 @@
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .button-group {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 373px) {
+  .button-group {
+    flex-direction: column;
+
+    button {
+      width: 181px;
+    }
+  }
+}
