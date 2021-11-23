@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import FormPage from './pages/form-page/form-page.component';
 import MenuPage from './pages/menu-page/menu.component';
 import AnimationBg from './Components/animation-bg/animation-bg.component';
+import ErrorPage from './pages/error-page/error-page.component';
 
 import {
   auth,
@@ -131,6 +132,8 @@ class App extends React.Component {
               </PrivateRoute>
             }
           />
+
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
     );
