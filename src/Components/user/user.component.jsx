@@ -10,7 +10,8 @@ const User = ({ getUserChoice, userScore, userChoice, currentUser }) => {
       <Choice name="user" choice={userChoice} />
       <GameButtons getUserChoice={getUserChoice} />
       <GameScore
-        name={currentUser.displayName.toUpperCase()}
+        // name={currentUser.displayName.toUpperCase()}
+        name="Dogu"
         score={userScore}
       />
     </div>

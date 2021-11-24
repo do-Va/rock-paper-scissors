@@ -1,7 +1,7 @@
 .game-button {
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
 
   display: flex;
   justify-content: center;
@@ -23,6 +23,11 @@
   &:active {
     box-shadow: 1px 1px 0px currentColor, 3px 3px 0px currentColor,
       5px 5px 0px currentColor, 10px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  @media only screen and (min-height: 650px) {
+    width: 75px;
+    height: 75px;
   }
 
   & img {
@@ -48,33 +53,49 @@
 
   &:nth-child(3) {
     top: 0;
-    right: -20px;
+    right: -15px;
+
+    @media only screen and (min-height: 650px) {
+      right: -20px;
+    }
 
     &:hover,
     &:focus {
       top: -5px;
-      right: -15px;
+      right: -10px;
+
+      @media only screen and (min-height: 650px) {
+        right: -15px;
+      }
     }
 
     &:active {
       top: -2px;
-      right: -18px;
+      right: -13px;
     }
   }
 
   &:nth-child(1) {
-    bottom: -20px;
+    bottom: -15px;
     left: 0;
+
+    @media only screen and (min-height: 650px) {
+      bottom: -20px;
+    }
 
     &:hover,
     &:focus {
       left: -5px;
-      bottom: -15px;
+      bottom: -10px;
+
+      @media only screen and (min-height: 650px) {
+        bottom: -15px;
+      }
     }
 
     &:active {
       left: -2px;
-      bottom: -18px;
+      bottom: -13px;
     }
   }
 }

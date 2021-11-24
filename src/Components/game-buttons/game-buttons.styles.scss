@@ -1,8 +1,14 @@
 .game-buttons {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: relative;
   transform: rotate(45deg);
 
-  margin-top: 70px;
+  margin-top: 10px;
+
+  @media only screen and (min-height: 650px) {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+  }
 }

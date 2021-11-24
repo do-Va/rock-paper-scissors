@@ -1,12 +1,44 @@
 .choice {
-  margin-top: 50px;
+  margin-top: 20px;
   transform: rotate(180deg);
+
+  @media only screen and (min-height: 550px) {
+    margin-top: 25px;
+  }
+
+  @media only screen and (min-height: 650px) {
+    margin-top: 40px;
+  }
 
   &.user {
     transform: rotate(0deg);
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    @media only screen and (min-height: 550px) {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+    @media only screen and (min-height: 650px) {
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
   }
 
   img {
-    transform: scale(1.4);
+    transform: scale(0.7);
+
+    @media only screen and (min-width: 500px) {
+      transform: scale(1.4);
+    }
+
+    @media only screen and (min-height: 550px) {
+      transform: scale(1);
+    }
+
+    @media only screen and (min-height: 650px) {
+      transform: scale(1.2);
+    }
   }
 }
