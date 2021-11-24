@@ -28,82 +28,82 @@ class App extends React.Component {
     };
   }
 
-  // unsubscribeFromAuth = null;
+  unsubscribeFromAuth = null;
 
-  // componentDidMount() {
-  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-  //     if (userAuth) {
-  //       const userRef = await createUserProfileDocument(userAuth);
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
 
-  //       userRef.onSnapshot(snapShot => {
-  //         this.setState({
-  //           currentUser: {
-  //             id: snapShot.id,
-  //             ...snapShot.data(),
-  //           },
-  //           isLoading: true,
-  //         });
-  //       });
-  //     } else {
-  //       this.setState({
-  //         currentUser: userAuth,
-  //         isLoading: false,
-  //       });
-  //     }
-  //   });
-  // }
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+            isLoading: true,
+          });
+        });
+      } else {
+        this.setState({
+          currentUser: userAuth,
+          isLoading: false,
+        });
+      }
+    });
+  }
 
-  // updateScore = gameOver => {
-  //   if (gameOver === 'win') {
-  //     this.setState(prevState => {
-  //       return {
-  //         ...prevState,
-  //         currentUser: {
-  //           ...prevState.currentUser,
-  //           score: Number(prevState.currentUser.score) + 100,
-  //         },
-  //         isWin: true,
-  //       };
-  //     });
+  updateScore = gameOver => {
+    if (gameOver === 'win') {
+      this.setState(prevState => {
+        return {
+          ...prevState,
+          currentUser: {
+            ...prevState.currentUser,
+            score: Number(prevState.currentUser.score) + 100,
+          },
+          isWin: true,
+        };
+      });
 
-  //     updatedScore(this.state.currentUser);
-  //   }
+      updatedScore(this.state.currentUser);
+    }
 
-  //   if (gameOver === 'lose') {
-  //     this.setState(prevState => {
-  //       return {
-  //         ...prevState,
-  //         currentUser: {
-  //           ...prevState.currentUser,
-  //           score: Number(prevState.currentUser.score) - 100,
-  //         },
-  //         isWin: false,
-  //       };
-  //     });
-  //     updatedScore(this.state.currentUser);
-  //   }
-  // };
+    if (gameOver === 'lose') {
+      this.setState(prevState => {
+        return {
+          ...prevState,
+          currentUser: {
+            ...prevState.currentUser,
+            score: Number(prevState.currentUser.score) - 100,
+          },
+          isWin: false,
+        };
+      });
+      updatedScore(this.state.currentUser);
+    }
+  };
 
-  // componentWillUnmount() {
-  //   this.unsubscribeFromAuth();
-  // }
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
 
-  // changeIsLoading = param => {
-  //   this.setState({ isLoading: param, isWin: false });
-  // };
+  changeIsLoading = param => {
+    this.setState({ isLoading: param, isWin: false });
+  };
 
-  // componentDidUpdate() {
-  //   localStorage.setItem('currentUser', JSON.stringify(this.state.currentUser));
-  //   localStorage.setItem('isLoading', JSON.stringify(this.state.isLoading));
-  //   localStorage.setItem('isWin', JSON.stringify(this.state.isWin));
-  // }
+  componentDidUpdate() {
+    localStorage.setItem('currentUser', JSON.stringify(this.state.currentUser));
+    localStorage.setItem('isLoading', JSON.stringify(this.state.isLoading));
+    localStorage.setItem('isWin', JSON.stringify(this.state.isWin));
+  }
 
   render() {
     return (
       <main className="app">
         <AnimationBg />
         <Routes>
-          {/* <Route
+          <Route
             path="/"
             element={
               <FormPage
@@ -122,8 +122,7 @@ class App extends React.Component {
                 />
               </PrivateRoute>
             }
-          /> */}
-          {/* 
+          />
           <Route
             path="game"
             element={
@@ -131,9 +130,8 @@ class App extends React.Component {
                 <GamePage {...this.state} updateScore={this.updateScore} />
               </PrivateRoute>
             }
-          /> */}
+          />
 
-          <Route path="*" element={<GamePage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
