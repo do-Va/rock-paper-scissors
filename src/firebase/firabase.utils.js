@@ -3,19 +3,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCClxKDTJY92FF9S2iPhK6jvoN9J-Ceegk',
-
-  authDomain: 'rock-paper-scissors-dova.firebaseapp.com',
-
-  projectId: 'rock-paper-scissors-dova',
-
-  storageBucket: 'rock-paper-scissors-dova.appspot.com',
-
-  messagingSenderId: '818936319831',
-
-  appId: '1:818936319831:web:3c9c371d1a6ca1f5703812',
-
-  measurementId: 'G-CYJPP4CXRV',
+  apiKey: 'AIzaSyDxzKFVsvvxCksdFpl8LGSwyUm-XOLXqjc',
+  authDomain: 'rock-paper-scissors-db-00.firebaseapp.com',
+  projectId: 'rock-paper-scissors-db-00',
+  storageBucket: 'rock-paper-scissors-db-00.appspot.com',
+  messagingSenderId: '3807200194',
+  appId: '1:3807200194:web:8b7d1a32cdd609bd150c5b',
+  measurementId: 'G-NY60HBH4JH',
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {

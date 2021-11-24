@@ -2,7 +2,7 @@
 
 ## Using React, Sass and Firebase
 
-[LIVE SITE URL](https://rock-paper-scissors-dova.web.app/)
+[LIVE SITE URL](https://rock-paper-scissors-db-00.web.app/)
 
 #
 
